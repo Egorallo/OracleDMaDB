@@ -24,7 +24,7 @@ DECLARE
 BEGIN
     v_result := check_even_odd();
 
-    DBMS_OUTPUT.PUT_LINE('Результат: ' || v_result);
+    DBMS_OUTPUT.PUT_LINE('Result: ' || v_result);
 END;
 /
 
