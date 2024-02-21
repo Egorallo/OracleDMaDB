@@ -24,3 +24,24 @@ BEGIN
 END;
 /
 
+
+CREATE OR REPLACE FUNCTION AB_FUNCSS (v_id NUMBER, v_val NUMBER) RETURN VARCHAR2
+IS
+v_count NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO v_count FROM MyTable WHERE id = v_id;
+    IF v_count > 0 THEN
+        RAISE_APPLICATION_ERROR(-20002, 'Already exists');
+    ELSE 
+        RETURN 'INSERT INTO TABLE MyTable (id, val) VALUES (' || v_id || ', ' || v_val || ');';
+    END IF;
+        
+END;
+/
+
+DECLARE
+    v_answer VARCHAR2(100);
+BEGIN
+    v_answer:=AB_FUNCSS(11, 222);
+    DBMS_OUTPUT.PUT_LINE(v_answer);
+END;

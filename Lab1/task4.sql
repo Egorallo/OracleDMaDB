@@ -19,3 +19,7 @@ BEGIN
     v_insert_cmd := generate_insert_command(120, 222);
 END;
 /
+
+
+DROP TABLE MyTable;
+/

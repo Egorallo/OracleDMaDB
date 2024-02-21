@@ -28,3 +28,4 @@ BEGIN
 END;
 /
 
+SELECT * FROM MyTable ORDER BY id;
