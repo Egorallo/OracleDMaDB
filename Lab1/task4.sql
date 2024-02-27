@@ -23,3 +23,4 @@ END;
 
 DROP TABLE MyTable;
 /
+
