@@ -41,7 +41,6 @@ END;
 BEGIN
     --restore_students_log(TO_TIMESTAMP('2024-02-28 04:27:10', 'YYYY-MM-DD HH24:MI:SS'));
     
-    
     restore_students_log(TO_TIMESTAMP('2024-02-28 04:27:10', 'YYYY-MM-DD HH24:MI:SS'), INTERVAL '0 00:01:00' DAY TO SECOND);
 
 END;
@@ -61,8 +60,5 @@ END;
 --
 --INSERT INTO STUDENTS (name, group_id) VALUES ('TANK', 1);
 --DELETE FROM STUDENTS WHERE NAME = 'Amogus';
---
---DELETE FROM STUDENTS_LOG
---WHERE LOG_ID = 38;
 --
 --DROP PROCEDURE restore_students_log;
