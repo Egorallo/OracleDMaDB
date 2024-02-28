@@ -39,9 +39,10 @@ END;
 /
 
 BEGIN
-    restore_students_log(TO_TIMESTAMP('2024-02-28 04:27:10', 'YYYY-MM-DD HH24:MI:SS'));
+    --restore_students_log(TO_TIMESTAMP('2024-02-28 04:27:10', 'YYYY-MM-DD HH24:MI:SS'));
     
-    restore_students_log('2024-02-28 04:27:10', INTERVAL '0 0:05:00' DAY TO SECOND);
+    
+    restore_students_log(TO_TIMESTAMP('2024-02-28 04:27:10', 'YYYY-MM-DD HH24:MI:SS'), INTERVAL '0 00:01:00' DAY TO SECOND);
 
 END;
 /
